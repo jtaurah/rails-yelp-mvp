@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
-  before_action :find_restaurant
-  before_action :find_review, only: %i[edit update destroy]
+  before_action :find_restaurant, only: %i[new create]
+  before_action :find_review, only: [:show]
 
   def new
     # We need @restaurant in our `simple_form_for`
@@ -17,24 +17,24 @@ class ReviewsController < ApplicationController
   end
 
   def show
-    @review = Review.find(params[:id])
+    # @review = Review.find(params[:id])
   end
 
-  def edit
-    find_restaurant
-    @review = Review.find(params[:id])
-  end
+  # def edit
+  #   find_restaurant
+  #   @review = Review.find(params[:id])
+  # end
 
-  def update
-    find_restaurant
-    @review = Review.find(params[:id])
+  # def update
+  #   find_restaurant
+  #   @review = Review.find(params[:id])
 
-    if @review.update(review_params)
-      redirect_to @restaurant
-    else
-      render :edit
-    end
-  end
+  #   if @review.update(review_params)
+  #     redirect_to @restaurant
+  #   else
+  #     render :edit
+  #   end
+  # end
 
   def destroy
     @review.destroy
@@ -52,6 +52,6 @@ class ReviewsController < ApplicationController
   end
 
   def find_review
-    @review = Review.find(params[:id]) if params[:id]
+    @review = Review.find(params[:id])
   end
 end

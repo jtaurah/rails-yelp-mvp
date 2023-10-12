@@ -12,10 +12,6 @@ Review.destroy_all
 
 puts "Creating restaurants"
 
-
-# require './app/models/restaurant'
-# require './app/models/review'
-
 categories = %w[chinese italian japanese french belgian]
 
 5.times do
