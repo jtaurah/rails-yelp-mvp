@@ -1,0 +1,6 @@
+<h1>Review Details</h1>
+
+<p><strong>Rating:</strong> <%= @review.rating %></p>
+<p><strong>Content:</strong> <%= @review.content %></p>
+
+<%= link_to "Back to Restaurant Details", restaurants_path(@review.restaurant) %>

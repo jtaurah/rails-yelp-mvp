@@ -1,0 +1,15 @@
+<!-- app/views/reviews/index.html.erb -->
+<h1>List of Reviews for <%= @restaurant.name %></h1>
+
+<% @reviews.each do |review| %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Rating: <%= review.rating %></h5>
+      <p class="card-text"><%= review.content %></p>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to 'New Review', new_restaurant_review_path(@restaurant), class: 'btn btn-success' %>
+<%= link_to 'Back to Restaurant', restaurant_path(@restaurant), class: 'btn btn-secondary' %>
+

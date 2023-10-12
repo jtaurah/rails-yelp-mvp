@@ -23,6 +23,8 @@ gem "turbo-rails"
 
 gem "simple_form"
 
+gem "faker"
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 

@@ -1,0 +1,3 @@
+<h1>Delete Review for <%= @restaurant.name %></h1>
+
+<%= link_to "Delete", [@restaurant, @review], method: :delete, data: { confirm: "Are you sure?" } %> 

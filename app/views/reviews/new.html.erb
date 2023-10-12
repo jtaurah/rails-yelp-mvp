@@ -1,0 +1,7 @@
+<!-- app/views/reviews/new.html.erb -->
+<h1>New Review for <%= @restaurant.name %></h1>
+
+<%= render 'forms', restaurant: @restaurant, review: @review %>
+
+<%= link_to 'Back to Restaurant', restaurant_path(@restaurant), class: 'btn btn-secondary' %>
+
